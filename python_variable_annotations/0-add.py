@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This script defines a function 'add' that takes two floating-point numbers
 as arguments, adds them together, and returns the result."""
 
