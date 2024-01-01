@@ -10,10 +10,10 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """Create a liste to launch n time wait  random and return a
     newlist sorted"""
-    list_delay = []
+    tasks = []
     for _ in range(n):
-        list_delay.append(wait_random(max_delay))
+        tasks.append(wait_random(max_delay))
 
-    result = await asyncio.gather(*list_delay)
+    delays = await asyncio.gather(*tasks)
 
-    return sorted(result)
+    return sorted(delays)
