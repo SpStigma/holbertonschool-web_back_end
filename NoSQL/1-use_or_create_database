@@ -1,0 +1,2 @@
+// This is a scrit that use or creat if not exist
+use my_db
