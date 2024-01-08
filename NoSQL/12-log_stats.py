@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""module has 2 method"""
 from pymongo import MongoClient
 
 def get_log_stats(nginx_collection):
