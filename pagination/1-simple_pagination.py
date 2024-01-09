@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""""
+"""module contains class Server and his differents methods"""
 import csv
 import math
 from typing import List
@@ -37,5 +37,5 @@ class Server:
 
         if start is None or end is None:
             return []
-  
+
         return dataset[start: end]
