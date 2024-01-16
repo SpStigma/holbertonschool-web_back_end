@@ -1,25 +1,4 @@
 export default class HolbertonCourse {
-  static validateString(value, attribute) {
-    if (typeof value !== 'string') {
-      throw new TypeError(`${attribute} must be a string`);
-    }
-    return value;
-  }
-
-  static validateNumber(value, attribute) {
-    if (typeof value !== 'number') {
-      throw new TypeError(`${attribute} must be a number`);
-    }
-    return value;
-  }
-
-  static validateArray(value, attribute) {
-    if (!Array.isArray(value) || !value.every((student) => typeof student === 'string')) {
-      throw new TypeError(`${attribute} must be an array of strings`);
-    }
-    return value;
-  }
-
   constructor(name, lenght, students) {
     this._name = HolbertonCourse.validateString(name, 'Name');
     this._lenght = HolbertonCourse.validateNumber(lenght, 'Lenght');
@@ -48,5 +27,26 @@ export default class HolbertonCourse {
 
   set students(newStudents) {
     this._students = HolbertonCourse.validateArray(newStudents, 'Students');
+  }
+
+  static validateString(value, attribute) {
+    if (typeof value !== 'string') {
+      throw new TypeError(`${attribute} must be a string`);
+    }
+    return value;
+  }
+
+  static validateNumber(value, attribute) {
+    if (typeof value !== 'number') {
+      throw new TypeError(`${attribute} must be a number`);
+    }
+    return value;
+  }
+
+  static validateArray(value, attribute) {
+    if (!Array.isArray(value) || !value.every((student) => typeof student === 'string')) {
+      throw new TypeError(`${attribute} must be an array of strings`);
+    }
+    return value;
   }
 }
