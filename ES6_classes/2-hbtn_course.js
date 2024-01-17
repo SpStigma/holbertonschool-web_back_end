@@ -1,7 +1,7 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
     this._name = HolbertonCourse.validateString(name, 'Name');
-    this._length = HolbertonCourse.validateNumber(lenght, 'Length');
+    this._length = HolbertonCourse.validateNumber(length, 'Length');
     this._students = HolbertonCourse.validateArray(students, 'Students');
   }
 
@@ -44,7 +44,7 @@ export default class HolbertonCourse {
   }
 
   static validateArray(value, attribute) {
-    if (!Array.isArray(value)) {
+    if (!Array.isArray(value) || !value.every(item => typeof item === 'string')) {
       throw new TypeError(`${attribute} must be an array of strings`);
     }
     return value;
