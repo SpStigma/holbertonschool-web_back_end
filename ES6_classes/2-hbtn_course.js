@@ -1,7 +1,7 @@
 export default class HolbertonCourse {
-  constructor(name, lenght, students) {
+  constructor(name, length, students) {
     this._name = HolbertonCourse.validateString(name, 'Name');
-    this._lenght = HolbertonCourse.validateNumber(lenght, 'Lenght');
+    this._length = HolbertonCourse.validateNumber(lenght, 'Length');
     this._students = HolbertonCourse.validateArray(students, 'Students');
   }
 
